@@ -9,10 +9,10 @@ import { IonInfiniteScroll } from '@ionic/angular';
 export class InfiniteScrollPage implements OnInit {
 
   /*To use html content we need to use viewchild */
-  @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
+  @ViewChild(IonInfiniteScroll, {static: false}) infiniteScroll: IonInfiniteScroll;
   data : any[] = Array(20);
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

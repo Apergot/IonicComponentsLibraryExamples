@@ -7,7 +7,7 @@
     </ion-item>
   </ion-list>
 
-  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll #infScroll threshold="150px" (ionInfinite)="loadData($event)">
       <ion-infinite-scroll-content
         loadingSpinner="crescent"
         loadingText="Cargando...">
