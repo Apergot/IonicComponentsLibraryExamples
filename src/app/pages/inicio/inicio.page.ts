@@ -49,6 +49,11 @@ export class InicioPage implements OnInit {
       name: 'Fabs',
       redirectTo: '/fab'
     },
+    {
+      icon: 'grid',
+      name: 'Grid - Rows',
+      redirectTo: '/grid'
+    },
   ];
 
   constructor() { }
