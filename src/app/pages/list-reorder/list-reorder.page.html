@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-title>Listas - Reorder</ion-title>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <!-- We need to call for an event when we stop holding the list item -->
+    <ion-reorder-group disabled="false"
+                        (ionItemReorder)="reorder($event)">
+        <ion-item *ngFor="let hero of heroes">
+            <ion-label>{{ hero }}</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    </ion-reorder-group>
+
+  
+  </ion-list>
+
+  <ion-button color="primary" expand="full" (click)="onClick()">Guardar</ion-button>
+
+</ion-content>
